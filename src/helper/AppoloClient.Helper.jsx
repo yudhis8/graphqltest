@@ -7,7 +7,7 @@ import {Alert} from 'react-native';
 const errorLink = onError(({graphQLErrors}: ErrorResponse) => {
   if (graphQLErrors) {
     graphQLErrors?.map(({message}: GraphQLError) => {
-      Alert.alert(`Graphql error ${message}`);
+      Alert.alert("alert", `Graphql error ${message}`);
     });
   }
 });
