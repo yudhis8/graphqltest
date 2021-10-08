@@ -18,6 +18,6 @@ const link = from([
 
 export const client = new ApolloClient({
   cache: new InMemoryCache(),
-  uri: 'https://apollo-fullstack-tutorial.herokuapp.com/',
+  link,
   defaultOptions: {watchQuery: {fetchPolicy: 'cache-and-network'}},
 });

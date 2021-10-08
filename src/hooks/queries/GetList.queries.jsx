@@ -1,8 +1,8 @@
 import gql from 'graphql-tag';
 
 export const GET_LIST = gql`
-  query GetLaunches {
-    launches {
+  query GetLaunches($after: String!) {
+    launches(after: $after) {
       cursor
       hasMore
       launches {
